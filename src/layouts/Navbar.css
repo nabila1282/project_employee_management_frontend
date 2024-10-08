@@ -1,0 +1,135 @@
+.bg-color {
+  background-color: #1A3668;
+
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.logo img {
+  width: 80px;
+  background: #fff !important;
+}
+
+.nav-links {
+  display: flex;
+  padding: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Media query for small devices (adjust the max-width as needed) */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    /* Hide the navigation links on small devices */
+  }
+
+  .navbar {
+    justify-content: center;
+    /* Center the logo on small devices */
+  }
+
+  .logo {
+    background-color: #fff !important;
+  }
+
+  .logo img {
+    width: 60px;
+    background-color: #fff !important;
+
+  }
+
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .menu-icon .change:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-icon .change:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon .change:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 4px;
+  color: #fff;
+  position: absolute;
+  background-color: #1A3668;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .nav-link {
+  display: block;
+  padding: 4px 2px;
+  /* border: 1px solid #fff; */
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Apply different styles on hover */
+.dropdown-content .nav-link:hover {
+  background-color: #000;
+  color: #fff;
+}
